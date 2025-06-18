@@ -18,3 +18,9 @@ interactive and user-friendly stopwatch
 web application.
 
 - PRODIGY INFOTECH
+
+Here are 3 key features of your stopwatch project:
+1.	Accurate Time Tracking – Start, pause, and reset functionality with real-time digital display in HH:MM:SS format.
+2.	Lap Recording with Deletion – Record multiple laps and remove individual entries instantly with a delete button.
+3.	Responsive & Stylish UI – Clean, user-friendly interface with animated buttons and a background-enhanced visual design.
+
