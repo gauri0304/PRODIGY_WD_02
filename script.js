@@ -41,6 +41,11 @@ function showMessage(text) {
 function start() {
     if (timerInterval !== null) return;
 
+    // Show Pause and Lap, hide Start
+    document.querySelector(".start").style.display = "none";
+    document.querySelector(".stop").style.display = "inline-block";
+    document.querySelector(".lap").style.display = "inline-block";
+
     startTime = Date.now() - elapsed;
     timerInterval = setInterval(() => {
         elapsed = Date.now() - startTime;
@@ -50,20 +55,30 @@ function start() {
     showMessage("Stopwatch started!");
 }
 
-function stop() {
-    clearInterval(timerInterval);
-    timerInterval = null;
-    showMessage("Stopwatch paused!");
-}
-
 function reset() {
     clearInterval(timerInterval);
     timerInterval = null;
     elapsed = 0;
     lapCount = 1;
     updateDisplay();
-    lapsContainer.innerHTML = ""; // clear laps
+    lapsContainer.innerHTML = "";
+
+    // Reset button visibility
+    document.querySelector(".start").style.display = "inline-block";
+    document.querySelector(".stop").style.display = "none";
+    document.querySelector(".lap").style.display = "none";
+
     showMessage("Stopwatch reset! Start again.");
+}
+
+function stop() {
+    clearInterval(timerInterval);
+    timerInterval = null;
+
+    document.querySelector(".start").style.display = "inline-block";
+    document.querySelector(".stop").style.display = "none";
+
+    showMessage("Stopwatch paused!");
 }
 
 function lap() {
@@ -76,8 +91,9 @@ function lap() {
     const lapEntry = document.createElement("div");
     lapEntry.classList.add("lap-entry");
 
-    // Create text span
+    // Create lap text with ClockIcons font
     const lapText = document.createElement("span");
+    lapText.className = "clock-text";
     lapText.textContent = `Lap ${lapCount++}: ${lapTime}`;
 
     // Create delete button
@@ -86,10 +102,8 @@ function lap() {
     deleteBtn.className = "delete-btn";
     deleteBtn.onclick = () => lapEntry.remove();
 
-    // Append both to lap entry
     lapEntry.appendChild(lapText);
     lapEntry.appendChild(deleteBtn);
 
-    // Add to the laps container
     lapsContainer.appendChild(lapEntry);
 }

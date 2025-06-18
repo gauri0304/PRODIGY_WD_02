@@ -1,6 +1,9 @@
-body {  
-  background-image: url(https://www.pixelstalk.net/wp-content/uploads/images6/Fitness-Wallpaper-HD-1080p.jpg);
-  font-family: Arial, sans-serif;
+@font-face {
+  font-family: 'ClockIcons';
+  src: url('./fonts/ClockIcons.woff2') format('woff2'),
+}
+
+body {
   text-align: center;
   position: relative;
   margin: 0;
@@ -15,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppings", sans-serif;
 }
 
 section {
@@ -107,8 +110,8 @@ body::before {
 
 .heading:hover {
   font-size: 46px;
-  color: #391b49;
-  text-shadow: 0 0 3px white;
+  color: #4973ff;
+  text-shadow: 1px 2px 3px white;
 }
 
 .stopwatch {
@@ -118,6 +121,10 @@ body::before {
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   margin-top: 10px;
+}
+
+.clock-text {
+  font-family: "ClockIcons";
 }
 
 #display {
@@ -191,34 +198,36 @@ button {
 }
 
 #laps {
+  font-family: "clockicons";
   margin-top: 20px;
   font-size: 17px;
   text-align: left;
   max-height: 140px;
   overflow-y: auto;
-  background: rgb(241, 241, 241, 0.5);
   padding: 6px 10px;
-  /* reduced outer padding */
   border-radius: 6px;
   margin-left: auto;
   margin-right: auto;
   width: 27rem;
   box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ccc;
 }
 
 #laps div {
   padding: 1px 0;
   /* reduced inner lap entry padding */
   border-bottom: 1px solid #ddd;
-  font-family: monospace;
-  color: #000;
+  color: white;
 }
 
 .lap-entry {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#laps div,
+.lap-entry {
+  font-family: "clockIcons";
 }
 
 .delete-btn {
