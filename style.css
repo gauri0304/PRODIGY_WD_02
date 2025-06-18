@@ -101,17 +101,48 @@ body::before {
   pointer-events: none;
 }
 
-.heading {
-  font-size: 42px;
-  color: #ffffff;
-  margin-top: 40px;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+/* Custom properties for heading gradient colors */
+@property --＠heading-color-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsl(300 100% 70%);
 }
 
-.heading:hover {
-  font-size: 46px;
-  color: #4973ff;
-  text-shadow: 1px 2px 3px white;
+@property --＠heading-color-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsl(260 100% 70%);
+}
+
+/* Animate the gradient colors */
+@keyframes heading-gradient-change {
+  to {
+    --＠heading-color-1: hsl(220 100% 70%);
+    --＠heading-color-2: hsl(180 100% 70%);
+  }
+}
+
+/* Modern animated gradient heading */
+.heading {
+  font-size: 42px;
+  margin-top: 40px;
+  text-align: center;
+
+  animation: heading-gradient-change 3s ease-in-out infinite alternate;
+
+  background: linear-gradient(
+    to right in oklch,
+    var(--＠heading-color-1),
+    var(--＠heading-color-2)
+  );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  transition: font-size 0.3s ease;
 }
 
 .stopwatch {
