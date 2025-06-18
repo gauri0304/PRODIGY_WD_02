@@ -10,19 +10,30 @@
 
 <body>
 
-    <h1 class="heading">⏱️Stopwatch</h1>
+    <section>
+        <div class="wave">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="content">
 
-    <div class="stopwatch">
-        <div id="display">00:00:00</div>
-        <button class="start" onclick="start()" aria-label="Start the stopwatch">Start</button>
-        <button class="stop" onclick="stop()" aria-label="Pause the stopwatch">Pause</button>
-        <button class="lap" onclick="lap()" aria-label="Lap was creating">Lap</button>
-        <button class="reset" onclick="reset()" aria-label="Reset the stopwatch">Reset</button>
+            <h1 class="heading">⏱️Stopwatch</h1>
 
-        <div id="message" class="status-message"></div>
-    </div>
+            <div class="stopwatch">
+                <div id="display">00:00:00</div>
+                <button class="start" onclick="start()" aria-label="Start the stopwatch">Start</button>
+                <button class="stop" onclick="stop()" aria-label="Pause the stopwatch">Pause</button>
+                <button class="lap" onclick="lap()" aria-label="Lap was creating">Lap</button>
+                <button class="reset" onclick="reset()" aria-label="Reset the stopwatch">Reset</button>
 
-    <div id="laps"></div>
+                <div id="message" class="status-message"></div>
+            </div>
+
+            <div id="laps"></div>
+
+        </div>
+    </section>
     <script src="script.js"></script>
 
 </body>
