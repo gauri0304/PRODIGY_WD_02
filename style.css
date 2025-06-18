@@ -101,7 +101,7 @@ body::before {
   pointer-events: none;
 }
 
-/* Custom properties for heading gradient colors */
+/* == Heading Styling == */
 @property --＠heading-color-1 {
   syntax: "<color>";
   inherits: false;
@@ -114,7 +114,6 @@ body::before {
   initial-value: hsl(260 100% 70%);
 }
 
-/* Animate the gradient colors */
 @keyframes heading-gradient-change {
   to {
     --＠heading-color-1: hsl(220 100% 70%);
@@ -122,7 +121,6 @@ body::before {
   }
 }
 
-/* Modern animated gradient heading */
 .heading {
   font-size: 42px;
   margin-top: 40px;
