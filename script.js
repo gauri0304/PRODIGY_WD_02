@@ -93,4 +93,3 @@ function lap() {
     // Add to the laps container
     lapsContainer.appendChild(lapEntry);
 }
-
