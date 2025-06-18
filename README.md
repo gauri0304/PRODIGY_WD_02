@@ -18,7 +18,8 @@ interactive and user-friendly stopwatch
 web application.
 
 - PRODIGY INFOTECH
-
+- <br>
+<br>
 Here are 3 key features of my ⏱️ Stopwatch Project:
 
 ⌛ Accurate Time Tracking – Start ▶️, pause ⏸️, and reset 🔁 functionality with real-time digital display in HH:MM:SS format.
