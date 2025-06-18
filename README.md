@@ -18,7 +18,7 @@ interactive and user-friendly stopwatch
 web application.
 
 - PRODIGY INFOTECH
-- <br>
+<br>
 <br>
 Here are 3 key features of my ⏱️ Stopwatch Project:
 
