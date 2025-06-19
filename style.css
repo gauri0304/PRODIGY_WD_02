@@ -257,7 +257,7 @@ button {
   font-family: "clockIcons";
 }
 
-.delete-btn {
+.delete-btn { 
   background-color: transparent;
   color: red;
   border: none;
