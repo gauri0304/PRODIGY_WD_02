@@ -6,7 +6,6 @@ let lapCount = 1;
 const display = document.getElementById("display");
 const message = document.getElementById("message");
 
-// Create lap container if not present
 let lapsContainer = document.getElementById("laps");
 if (!lapsContainer) {
     lapsContainer = document.createElement("div");
@@ -41,7 +40,6 @@ function showMessage(text) {
 function start() {
     if (timerInterval !== null) return;
 
-    // Show Pause and Lap, hide Start
     document.querySelector(".start").style.display = "none";
     document.querySelector(".stop").style.display = "inline-block";
     document.querySelector(".lap").style.display = "inline-block";
@@ -63,7 +61,6 @@ function reset() {
     updateDisplay();
     lapsContainer.innerHTML = "";
 
-    // Reset button visibility
     document.querySelector(".start").style.display = "inline-block";
     document.querySelector(".stop").style.display = "none";
     document.querySelector(".lap").style.display = "none";
@@ -91,12 +88,10 @@ function lap() {
     const lapEntry = document.createElement("div");
     lapEntry.classList.add("lap-entry");
 
-    // Create lap text with ClockIcons font
     const lapText = document.createElement("span");
     lapText.className = "clock-text";
     lapText.textContent = `Lap ${lapCount++}: ${lapTime}`;
 
-    // Create delete button
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "✖";
     deleteBtn.className = "delete-btn";
