@@ -206,7 +206,6 @@ button {
   transform: scale(1.05);
 }
 
-/* Reset Button */
 .reset {
   background-color: #008CBA;
   color: white;
@@ -243,7 +242,6 @@ button {
 
 #laps div {
   padding: 1px 0;
-  /* reduced inner lap entry padding */
   border-bottom: 1px solid #ddd;
   color: white;
 }
@@ -264,7 +262,6 @@ button {
   color: red;
   border: none;
   font-size: 16px;
-  /* optional: slightly smaller button */
   cursor: pointer;
   margin-left: 10px;
   transition: transform 0.2s;
